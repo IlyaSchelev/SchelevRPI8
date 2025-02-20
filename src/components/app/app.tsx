@@ -1,6 +1,8 @@
 import {JSX} from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppRoute } from '../../const.ts';
+import {AuthorizationStatus} from '../../const.ts'
+import { PrivateRoute } from '../private-route/private-route.tsx';
 import MainPage from '../../pages/main-page/main-page.tsx';
 import Login from '../../pages/login/login';
 import Favorites from '../../pages/favorites/favorites';
@@ -22,7 +24,15 @@ function App({ rentalOffersCount }: AppMainPageProps): JSX.Element {
 
         <Route
           path={AppRoute.Favorites}
-          element={<Favorites/>}
+          element={
+            <PrivateRoute
+              authorizationStatus={ AuthorizationStatus.NoAuth }
+            >
+              <Favorites />
+
+            </PrivateRoute>
+          }
+
         />
 
         <Route

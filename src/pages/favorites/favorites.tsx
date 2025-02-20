@@ -1,4 +1,5 @@
 import {JSX} from 'react'
+import { Logo } from '../../components/logo/logo';
 
 function Favorites(): JSX.Element {
     return(
@@ -26,9 +27,7 @@ function Favorites(): JSX.Element {
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
-              <a className="header__logo-link" href="main.html">
-                <img className="header__logo" src="img/logo.svg" alt="Rent service logo" width="81" height="41"/>
-              </a>
+              <Logo/>
             </div>
             <nav className="header__nav">
               <ul className="header__nav-list">
@@ -181,9 +180,7 @@ function Favorites(): JSX.Element {
         </div>
       </main>
       <footer className="footer container">
-        <a className="footer__logo-link" href="main.html">
-          <img className="footer__logo" src="img/logo.svg" alt="Rent service logo" width="64" height="33"/>
-        </a>
+        <Logo/>
       </footer>
     </div>
     );

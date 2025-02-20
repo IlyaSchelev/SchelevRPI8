@@ -12,3 +12,11 @@ const Setting = {
   } as const;
 
   export {AppRoute};
+
+  const AuthorizationStatus = {
+    Auth: 'AUTH',
+    NoAuth: 'NO_AUTH',
+    Unknown: 'UNKNOWN',
+  } as const;
+
+  export {AuthorizationStatus};
