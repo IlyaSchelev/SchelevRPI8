@@ -1,28 +1,46 @@
 import {JSX} from 'react'
-// import MainPage from "../my-rent-service/src/pages/main-page/main-page.tsx"
-// import Login from '../../pages/login/login';
-// import Favorites from '../../pages/favorites/favorites';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AppRoute } from '../../const.ts';
+import MainPage from '../../pages/main-page/main-page.tsx';
+import Login from '../../pages/login/login';
+import Favorites from '../../pages/favorites/favorites';
 import Offer from '../../pages/offer/offer';
+import Errorpage from '../../pages/error-page/error-page.tsx';
 
-// type AppMainPageProps = {
-//     rentalOffersCount: number;
-//   }
+type AppMainPageProps = {
+    rentalOffersCount: number;
+}
 
-// function App({rentalOffersCount}:AppMainPageProps): JSX.Element {
-//   //  return (<MainPage rentalOffersCount={rentalOffersCount}/>);
-//    return (<Login />);
-// } 
+function App({ rentalOffersCount }: AppMainPageProps): JSX.Element {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path={AppRoute.Main}
+          element={<MainPage rentalOffersCount={rentalOffersCount} />}
+        />
 
-// function App(): JSX.Element {
-//    return (<Login />);
-// } 
+        <Route
+          path={AppRoute.Favorites}
+          element={<Favorites/>}
+        />
 
-// function App(): JSX.Element {
-//   return (<Favorites />);
-// } 
+        <Route
+          path={AppRoute.Login}
+          element={<Login/>}
+        />
 
-function App(): JSX.Element {
-  return (<Offer />);
-} 
+        <Route
+          path={AppRoute.Offer}
+          element={<Offer/>}
+        />
 
-export default App;
+        <Route
+          path='*'
+          element={<Errorpage/>}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+} export default App;
+

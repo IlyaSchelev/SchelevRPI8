@@ -1,6 +1,6 @@
 import {JSX} from 'react'
 
-function Favorites(): JSX.Element {
+function Errorpage(): JSX.Element {
     return(
         <body>
         <div className="page">
@@ -35,5 +35,5 @@ function Favorites(): JSX.Element {
       </body>  
     );
 }
-export default Favorites;
+export default Errorpage;
     
