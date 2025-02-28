@@ -1,5 +1,6 @@
 import {JSX} from 'react'
 import { Logo } from '../../components/logo/logo';
+import { FullOffer } from '../../types/offer';
 
 function Offer(): JSX.Element {
     return(

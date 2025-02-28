@@ -1,5 +1,5 @@
 import { FullOffer } from '../types/offer.ts';
-const offers: FullOffer[] = [
+export const offers: FullOffer[] = [
   {
     'id': 'bbb06a0e-3f92-446d-9a68-cb64b5d38e2b',
     'title': 'Wood and stone place',
@@ -53,4 +53,4 @@ const offers: FullOffer[] = [
     'bedrooms': 2,
     'maxAdults': 3,
   },
-]; export {offers}
+]; 
