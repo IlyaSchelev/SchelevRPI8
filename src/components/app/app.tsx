@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppRoute } from '../../const.ts';
 import {AuthorizationStatus} from '../../const.ts'
 import { PrivateRoute } from '../private-route/private-route.tsx';
+import { FullOffer } from '../../types/offer.ts';
 import MainPage from '../../pages/main-page/main-page.tsx';
 import Login from '../../pages/login/login';
 import Favorites from '../../pages/favorites/favorites';
@@ -11,9 +12,10 @@ import Errorpage from '../../pages/error-page/error-page.tsx';
 
 type AppMainPageProps = {
     rentalOffersCount: number;
+    offers: FullOffer[];
 }
 
-function App({ rentalOffersCount }: AppMainPageProps): JSX.Element {
+function App({ rentalOffersCount, offers }: AppMainPageProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
