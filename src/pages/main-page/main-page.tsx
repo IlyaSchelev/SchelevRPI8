@@ -1,6 +1,7 @@
 import {JSX} from 'react'
 import CitiesCard from '../../components/cities-card/cities-card';
 import { Logo } from '../../components/logo/logo';
+import { CitiesCardList } from '../../components/cities-card-list/cities-card-list';
 
 type MainPageProps = {
   rentalOffersCount: number;
@@ -94,11 +95,11 @@ function MainPage({rentalOffersCount} : MainPageProps): JSX.Element {
                   </ul>
                 </form>
                 <div className="cities__places-list places__list tabs__content">
-                  <CitiesCard/>
-                  <CitiesCard/>
-                  <CitiesCard/>
-                  <CitiesCard/>
-                  <CitiesCard/>
+                  <CitiesCardList/>
+                  <CitiesCardList/>
+                  <CitiesCardList/>
+                  <CitiesCardList/>
+                  <CitiesCardList/>
                 </div>
               </section>
               <div className="cities__right-section">

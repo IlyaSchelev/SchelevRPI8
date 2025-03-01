@@ -1,4 +1,5 @@
 import { FullOffer } from '../types/offer.ts';
+
 export const offers: FullOffer[] = [
   {
     'id': 'bbb06a0e-3f92-446d-9a68-cb64b5d38e2b',

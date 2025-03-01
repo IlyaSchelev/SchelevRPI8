@@ -9,7 +9,7 @@ type CitiesCardProps = {
   rating: number;
 }
 
-function CitiesCard({id, title, type, price, previewImage, isPremium, rating}: CitiesCardProps )  {
+export function CitiesCard({id, title, type, price, previewImage, isPremium, rating}: CitiesCardProps )  {
     return(<article className="cities__card place-card">
         <div className="place-card__mark">
           <span>{isPremium}</span>
