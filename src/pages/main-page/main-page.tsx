@@ -1,13 +1,14 @@
-import {JSX} from 'react'
-import CitiesCard from '../../components/cities-card/cities-card';
+
 import { Logo } from '../../components/logo/logo';
-import { CitiesCardList } from '../../components/cities-card-list/cities-card-list';
+import  CitiesCardList  from '../../components/cities-card-list/cities-card-list';
+import { OffersList } from '../../types/offer';
 
 type MainPageProps = {
   rentalOffersCount: number;
+  offersList: OffersList[];
 }
 
-function MainPage({rentalOffersCount} : MainPageProps): JSX.Element {
+function MainPage({rentalOffersCount, offersList}: MainPageProps) {
     return(<div className="page page--gray page--main">
         <header className="header">
           <div className="container">
@@ -95,11 +96,9 @@ function MainPage({rentalOffersCount} : MainPageProps): JSX.Element {
                   </ul>
                 </form>
                 <div className="cities__places-list places__list tabs__content">
-                  <CitiesCardList/>
-                  <CitiesCardList/>
-                  <CitiesCardList/>
-                  <CitiesCardList/>
-                  <CitiesCardList/>
+                  
+                  <CitiesCardList offersList = {offersList}/>
+
                 </div>
               </section>
               <div className="cities__right-section">

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppRoute } from '../../const.ts';
 import { AuthorizationStatus } from '../../const.ts'
 import { PrivateRoute } from '../private-route/private-route.tsx';
-import { FullOffer } from '../../types/offer.ts';
+import { FullOffer, OffersList } from '../../types/offer.ts';
 import MainPage from '../../pages/main-page/main-page.tsx';
 import Login from '../../pages/login/login';
 import Favorites from '../../pages/favorites/favorites';
@@ -11,8 +11,9 @@ import Offer from '../../pages/offer/offer';
 import Errorpage from '../../pages/error-page/error-page.tsx';
 
 type AppMainPageProps = {
-    rentalOffersCount: number;
-    offers: FullOffer[];
+  rentalOffersCount: number;
+  offersList: OffersList[];
+  offers: FullOffer[];
 }
 
 function App({ rentalOffersCount, offers }: AppMainPageProps): JSX.Element {
@@ -21,7 +22,7 @@ function App({ rentalOffersCount, offers }: AppMainPageProps): JSX.Element {
       <Routes>
         <Route
           path={AppRoute.Main}
-          element={<MainPage rentalOffersCount={rentalOffersCount}
+          element={<MainPage rentalOffersCount={ rentalOffersCount } offersList={offersList}
           offers = { offers }/>}
         />
 
@@ -44,8 +45,7 @@ function App({ rentalOffersCount, offers }: AppMainPageProps): JSX.Element {
         />
 
         <Route
-          path={AppRoute.Offer}
-          element={<Offer/>}
+          path={`${AppRoute.Offer}/:id` } element ={<Offer offers = {offers}/>}
         />
 
         <Route
