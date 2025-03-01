@@ -1,7 +1,7 @@
 import {JSX} from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppRoute } from '../../const.ts';
-import {AuthorizationStatus} from '../../const.ts'
+import { AuthorizationStatus } from '../../const.ts'
 import { PrivateRoute } from '../private-route/private-route.tsx';
 import { FullOffer } from '../../types/offer.ts';
 import MainPage from '../../pages/main-page/main-page.tsx';

@@ -2,7 +2,11 @@ import {JSX} from 'react'
 import { Logo } from '../../components/logo/logo';
 import { FullOffer } from '../../types/offer';
 
-function Offer(): JSX.Element {
+type OfferProps = {
+  offers: FullOffer[];
+}
+
+function Offer({offers}:OfferProps){
     return(
 
         
