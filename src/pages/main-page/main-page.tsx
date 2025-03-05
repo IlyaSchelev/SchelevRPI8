@@ -1,11 +1,12 @@
 
 import { Logo } from '../../components/logo/logo';
 import { CitiesCardList }  from '../../components/cities-card-list/cities-card-list';
-import { OffersList } from '../../types/offer';
+import { OffersList, FullOffer } from '../../types/offer';
 
 type MainPageProps = {
   rentalOffersCount: number;
   offersList: OffersList[];
+  offers: FullOffer[];
 }
 
 function MainPage({rentalOffersCount, offersList}: MainPageProps) {

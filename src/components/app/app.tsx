@@ -7,6 +7,7 @@ import { FullOffer } from '../../types/offer.ts';
 import MainPage from '../../pages/main-page/main-page.tsx';
 import Login from '../../pages/login/login';
 import Favorites from '../../pages/favorites/favorites';
+import Offer from '../../pages/offer/offer.tsx';
 import { OffersList } from '../../types/offer.ts';
 import Errorpage from '../../pages/error-page/error-page.tsx';
 
@@ -16,13 +17,13 @@ type AppMainPageProps = {
   offers: FullOffer[];
 }
 
-function App({ rentalOffersCount, offers }: AppMainPageProps): JSX.Element {
+function App({ rentalOffersCount, offers, offersList }: AppMainPageProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path={AppRoute.Main}
-          element={<MainPage rentalOffersCount={ rentalOffersCount } offersList={offersList}
+          element={<MainPage rentalOffersCount={ rentalOffersCount } offersList = {offersList}
           offers = { offers }/>}
         />
 

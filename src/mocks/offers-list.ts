@@ -24,4 +24,4 @@ const offersList: OffersList[] = [
     'isPremium': false,
     'rating': 4.9
   }
-]; export {offersList};
+]; export default offersList;
