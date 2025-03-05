@@ -1,11 +1,14 @@
 import { Logo } from '../../components/logo/logo';
 import { FullOffer } from '../../types/offer';
+import { useParams } from 'react-router-dom';
 
 type OfferProps = {
   offers: FullOffer[];
 }
 
-function Offer({offers}:OfferProps){
+function Offer({ offers }:OfferProps){
+  const params = useParams();
+  const offer = offers.find((item) => item.id === params.id);
     return(
 
         

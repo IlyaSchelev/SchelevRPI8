@@ -1,6 +1,6 @@
 
 import { Logo } from '../../components/logo/logo';
-import  CitiesCardList  from '../../components/cities-card-list/cities-card-list';
+import { CitiesCardList }  from '../../components/cities-card-list/cities-card-list';
 import { OffersList } from '../../types/offer';
 
 type MainPageProps = {
