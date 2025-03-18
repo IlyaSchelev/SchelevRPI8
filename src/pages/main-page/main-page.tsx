@@ -1,4 +1,3 @@
-
 import { Logo } from '../../components/logo/logo';
 import { CitiesCardList }  from '../../components/cities-card-list/cities-card-list';
 import { OffersList, FullOffer } from '../../types/offer';

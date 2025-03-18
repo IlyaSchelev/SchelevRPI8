@@ -1,15 +1,15 @@
 import { OffersList } from '../../types/offer';
-import { CitiesCard } from '../cities-card/cities-card';
+import { FavoriteCard } from '../favorite-card/favorite-card';
 
-type CitiesCardListProps = {
+type FavoriteCardListProps = {
   offersList: OffersList[];
 };
 
-function CitiesCardList({ offersList }: CitiesCardListProps) {
+function FavoriteCardList({ offersList }: FavoriteCardListProps) {
   return (
-    <div className="cities__places-list places__list tabs__content">
-      {Array.from(offersList, (item) => (
-        <CitiesCard 
+    <div className="favorites__places">
+        {Array.from(offersList, (item) => (
+        <FavoriteCard
           key={ item.id } 
           id={ item.id } 
           title={ item.title } 
@@ -24,4 +24,4 @@ function CitiesCardList({ offersList }: CitiesCardListProps) {
   );
 }
 
-export {CitiesCardList};
+export {FavoriteCardList};

@@ -1,4 +1,3 @@
-import {JSX} from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppRoute } from '../../const.ts';
 import { AuthorizationStatus } from '../../const.ts'
@@ -17,7 +16,7 @@ type AppMainPageProps = {
   offers: FullOffer[];
 }
 
-function App({ rentalOffersCount, offers, offersList }: AppMainPageProps): JSX.Element {
+function App({ rentalOffersCount, offers, offersList }: AppMainPageProps) {
   return (
     <BrowserRouter>
       <Routes>
@@ -30,12 +29,8 @@ function App({ rentalOffersCount, offers, offersList }: AppMainPageProps): JSX.E
         <Route
           path={AppRoute.Favorites}
           element={
-            <PrivateRoute
-              authorizationStatus={ AuthorizationStatus.NoAuth }
-            >
-              <Favorites />
-
-            </PrivateRoute>
+              <Favorites offersList = {offersList}
+          offers = { offers }/>
           }
 
         />

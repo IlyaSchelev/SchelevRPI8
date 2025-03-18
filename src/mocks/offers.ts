@@ -8,12 +8,12 @@ const offers: FullOffer[] = [
     'type': 'apartment',
     'price': 370,
     'images': [
-      '20.jpg',
-      '17.jpg',
-      '16.jpg',
-      '15.jpg',
-      '2.jpg',
-      '7.jpg',
+      '/img/apartment-01.jpg',
+      '/img/apartment-02.jpg',
+      '/img/apartment-03.jpg',
+      '/img/apartment-02.jpg',
+      '/img/apartment-01.jpg',
+      '/img/apartment-03.jpg',
     ],
     'city': {
       'name': 'Paris',
@@ -46,7 +46,7 @@ const offers: FullOffer[] = [
     'host': {
       'isPro': true,
       'name': 'Angelina',
-      'avatarUrl': 'avatar-angelina.jpg',
+      'avatarUrl': '/img/avatar-angelina.jpg',
     },
     'isPremium': false,
     'isFavorite': true,
