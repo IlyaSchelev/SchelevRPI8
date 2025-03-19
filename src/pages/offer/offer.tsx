@@ -1,3 +1,4 @@
+import { CommentForm } from '../../components/comment-form/comment-form';
 import { Logo } from '../../components/logo/logo';
 import { FullOffer } from '../../types/offer';
 import { useParams } from 'react-router-dom';
@@ -127,7 +128,9 @@ function Offer({ offers }: OfferProps) {
                   <p className="offer__text">{offer.description}</p>
                 </div>
               </div>
-              {/* Reviews section remains static for now */}
+              
+              <CommentForm/>
+
             </div>
           </div>
           <section className="offer__map map"></section>
