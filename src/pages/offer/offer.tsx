@@ -133,7 +133,10 @@ function Offer({ offers }: OfferProps) {
 
             </div>
           </div>
-          <section className="offer__map map"></section>
+          <section className="offer__map map">
+
+
+          </section>
         </section>
         {/* Near places section remains static for now */}
       </main>
