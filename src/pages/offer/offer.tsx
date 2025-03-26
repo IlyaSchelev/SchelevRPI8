@@ -1,11 +1,14 @@
-import { CommentForm } from '../../components/comment-form/comment-form';
+import { ReviewList } from '../../components/review-list/review-list';
 import { Logo } from '../../components/logo/logo';
-import { FullOffer } from '../../types/offer';
+import { Map } from '../../components/map/map';
+import { CitiesCardList } from '../../components/cities-card-list/cities-card-list';
+import { FullOffer, OffersList } from '../../types/offer';
 import { useParams } from 'react-router-dom';
+import offersList from '../../mocks/offers-list';
 
 type OfferProps = {
   offers: FullOffer[];
-}
+};
 
 function Offer({ offers }: OfferProps) {
   const params = useParams();
@@ -15,6 +18,11 @@ function Offer({ offers }: OfferProps) {
     return <div>Offer not found</div>;
   }
 
+  // Фильтруем offersList, исключая текущее предложение, и берём первые 3
+  const nearbyOffers: OffersList[] = offersList
+    .filter((nearbyOffer) => nearbyOffer.id !== offer.id)
+    .slice(0, 3);
+
   return (
     <div className="page">
       <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
@@ -22,7 +30,6 @@ function Offer({ offers }: OfferProps) {
       </svg>
       
       <header className="header">
-        {/* Header remains unchanged */}
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
@@ -129,16 +136,20 @@ function Offer({ offers }: OfferProps) {
                 </div>
               </div>
               
-              <CommentForm/>
+              <ReviewList offerId={offer.id} />
 
             </div>
           </div>
-          <section className="offer__map map">
-
-
+          <section className="offer__map map" style={{ height: '400px', width: '1000px', margin: '0 auto' }}>
+            <Map offersList={nearbyOffers} />
           </section>
         </section>
-        {/* Near places section remains static for now */}
+        <div className="container">
+          <section className="near-places places">
+            <h2 className="near-places__title">Other places in the neighbourhood</h2>
+            <CitiesCardList offersList={nearbyOffers} />
+          </section>
+        </div>
       </main>
     </div>
   );

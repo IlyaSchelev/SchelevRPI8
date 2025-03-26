@@ -1,3 +1,5 @@
+// mocks/offers-list.ts
+
 import { OffersList } from "../types/offer";
 
 const offersList: OffersList[] = [
@@ -6,7 +8,7 @@ const offersList: OffersList[] = [
     'title': 'beautiful place',
     'type': 'apartment',
     'price': 350,
-    'previewImage': 'img/apartment-03.jpg',
+    'previewImage': '/img/apartment-03.jpg', // Добавляем ведущий слэш
     'city': {
       'name': 'Amsterdam',
       'location': {
@@ -30,7 +32,7 @@ const offersList: OffersList[] = [
     'title': 'Wood and stone place',
     'type': 'apartment',
     'price': 370,
-    'previewImage': 'img/apartment-01.jpg',
+    'previewImage': '/img/apartment-01.jpg', // Добавляем ведущий слэш
     'city': {
       'name': 'Amsterdam',
       'location': {
@@ -54,7 +56,7 @@ const offersList: OffersList[] = [
     'title': 'simple place',
     'type': 'house',
     'price': 300,
-    'previewImage': 'img/apartment-02.jpg',
+    'previewImage': '/img/apartment-02.jpg', // Добавляем ведущий слэш
     'city': {
       'name': 'Amsterdam',
       'location': {
@@ -68,9 +70,10 @@ const offersList: OffersList[] = [
       'longitude': 4.929309666406198,
       'zoom': 16,
     },
-
     'isPremium': true,
     'isFavorite': true,
     'rating': 4.9,
   },
-]; export default offersList;
+];
+
+export default offersList;
