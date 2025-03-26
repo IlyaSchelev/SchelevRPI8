@@ -26,11 +26,16 @@ function App({ rentalOffersCount, offers, offersList }: AppMainPageProps) {
           offers = { offers }/>}
         />
 
-        <Route
+          <Route
           path={AppRoute.Favorites}
           element={
+            <PrivateRoute
+              authorizationStatus={ AuthorizationStatus.NoAuth }
+            >
               <Favorites offersList = {offersList}
           offers = { offers }/>
+
+            </PrivateRoute>
           }
 
         />
@@ -52,4 +57,3 @@ function App({ rentalOffersCount, offers, offersList }: AppMainPageProps) {
     </BrowserRouter>
   );
 } export default App;
-
