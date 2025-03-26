@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
-import { Setting } from './const';
 import { Provider } from 'react-redux'
 import offers from './mocks/offers';
 import {offersList } from './mocks/offers-list';
@@ -18,7 +17,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store = {store}>
-      <App rentalOffersCount={Setting.RentalOffersCount}
+      <App
       offersList={ offersList } 
       offers = { offers }
       reviews = { reviews }

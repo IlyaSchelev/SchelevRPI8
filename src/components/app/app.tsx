@@ -9,14 +9,11 @@ import Favorites from '../../pages/favorites/favorites';
 import Offer from '../../pages/offer/offer.tsx';
 import { OffersList } from '../../types/offer.ts';
 import Errorpage from '../../pages/error-page/error-page.tsx';
-import { ReviewType } from '../../types/review.ts'
 
 type AppMainPageProps = {
   rentalOffersCount: number;
   offersList: OffersList[];
   offers: FullOffer[];
-  reviews: ReviewType[];
-
 }
 
 function App({ rentalOffersCount, offers, offersList }: AppMainPageProps) {
@@ -26,22 +23,19 @@ function App({ rentalOffersCount, offers, offersList }: AppMainPageProps) {
         <Route
           path={AppRoute.Main}
           element={<MainPage rentalOffersCount={ rentalOffersCount } offersList = {offersList}
-          offers = { offers } />}
+          offers = { offers }/>}
         />
 
           <Route
           path={AppRoute.Favorites}
           element={
-            <PrivateRoute
-              authorizationStatus={ AuthorizationStatus.NoAuth }
-            >
               <Favorites offersList = {offersList}
-          offers = { offers }/>
-
-            </PrivateRoute>
+          offers = { offers } />
           }
 
         />
+
+
 
         <Route
           path={AppRoute.Login}

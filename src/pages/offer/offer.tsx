@@ -3,8 +3,9 @@ import { Logo } from '../../components/logo/logo';
 import { Map } from '../../components/map/map';
 import { CitiesCardList } from '../../components/cities-card-list/cities-card-list';
 import { FullOffer, OffersList } from '../../types/offer';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import {offersList} from '../../mocks/offers-list';
+import { AppRoute } from '../../const';
 
 type OfferProps = {
   offers: FullOffer[];
@@ -41,7 +42,9 @@ function Offer({ offers }: OfferProps) {
                   <a className="header__nav-link header__nav-link--profile" href="#">
                     <div className="header__avatar-wrapper user__avatar-wrapper"></div>
                     <span className="header__user-name user__name">Myemail@gmail.com</span>
-                    <span className="header__favorite-count">3</span>
+                      <Link to={`${AppRoute.Favorites}/`}>
+                          <span className="header__favorite-count">3</span>
+                      </Link>
                   </a>
                 </li>
                 <li className="header__nav-item">

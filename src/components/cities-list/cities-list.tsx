@@ -5,7 +5,7 @@ import { AppRoute, CITIES_LOCATION } from '../../const';
 import { CityOffer } from '../../types/offer';
 
 type citiesListProps = {
-  selectedCity: CityOffer | undefined;
+  selectedCity: CityOffer;
 }
 
 function CitiesList({ selectedCity }: citiesListProps) {
