@@ -76,4 +76,4 @@ const offersList: OffersList[] = [
   },
 ];
 
-export default offersList;
+export {offersList};

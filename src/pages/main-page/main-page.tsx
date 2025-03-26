@@ -9,7 +9,7 @@ type MainPageProps = {
   offers: FullOffer[];
 };
 
-function MainPage({ rentalOffersCount, offersList }: MainPageProps) {
+function MainPage({ rentalOffersCount, offersList}: MainPageProps) {
   return (
     <div className="page page--gray page--main">
       <header className="header">

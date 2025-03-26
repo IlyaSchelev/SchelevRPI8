@@ -1,16 +1,14 @@
-// types/review.ts
-
 export type User = {
     name: string;
     avatarUrl: string;
     isPro: boolean;
-  };
+};
   
-  export type ReviewType = {
-    id: string;
-    date: string;
-    user: User;
-    comment: string;
-    rating: number;
-    offerId: string; // Новое поле для связи с предложением
-  };
+export type ReviewType = {
+id: string;
+date: string;
+user: User;
+comment: string;
+rating: number;
+offerId: string; 
+};

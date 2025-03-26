@@ -4,7 +4,7 @@ import { Map } from '../../components/map/map';
 import { CitiesCardList } from '../../components/cities-card-list/cities-card-list';
 import { FullOffer, OffersList } from '../../types/offer';
 import { useParams } from 'react-router-dom';
-import offersList from '../../mocks/offers-list';
+import {offersList} from '../../mocks/offers-list';
 
 type OfferProps = {
   offers: FullOffer[];
