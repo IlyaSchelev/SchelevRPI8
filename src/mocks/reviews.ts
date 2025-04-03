@@ -1,5 +1,3 @@
-// mocks/reviews.ts
-
 import { ReviewType } from "../types/review";
 
 const reviews: ReviewType[] = [

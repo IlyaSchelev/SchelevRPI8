@@ -1,5 +1,6 @@
 import { SortOffersType } from './const';
 import { CityOffer, OffersList } from './types/offer';
+import { SortOffer } from './types/sort';
 
 export const getCity = (cityName: string, cities: CityOffer[]): CityOffer => {
   const foundCity = cities.find((city) => city.name === cityName);

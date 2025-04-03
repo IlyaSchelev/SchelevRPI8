@@ -4,7 +4,7 @@ import { getCity } from '../utils';
 import { changeCity, offersCityList } from './action';
 import { CITIES_LOCATION } from '../const';
 
-const defaultCity = getCity('Paris', CITIES_LOCATION);
+const defaultCity = getCity('Amsterdam', CITIES_LOCATION);
 
 const initialState = {
   city: defaultCity,

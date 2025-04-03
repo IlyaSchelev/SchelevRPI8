@@ -70,16 +70,16 @@ const offers: FullOffer[] = [
       '/img/apartment-03.jpg',
     ],
     'city': {
-      'name': 'Amsterdam',
+      'name': 'Paris',
       'location': {
-        'latitude': 52.3676,
-        'longitude': 4.9041,
+        "latitude": 48.8566,
+        "longitude": 2.3522,
         'zoom': 13,
       },
     },
     'location': {
-      'latitude': 52.3609553943508,
-      'longitude': 4.85309666406198,
+      'latitude': 48.8609553943508,
+      'longitude': 2.35309666406198,
       'zoom': 16,
     },
     'goods': [
